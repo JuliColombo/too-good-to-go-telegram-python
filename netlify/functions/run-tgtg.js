@@ -1,9 +1,12 @@
-let XMLHttpRequest = require('xhr2');
+let $ = require( "jquery" );
 
 function callPythonScript(url) {
-    let request = new XMLHttpRequest();
-    request.open("POST", url, false);
-    request.send();
+    $.ajax({
+        type: "POST",
+        url: url,
+    }).done(function (o) {
+        console.log(o)
+    });
 }
 
 exports.handler = async function (event, context) {
