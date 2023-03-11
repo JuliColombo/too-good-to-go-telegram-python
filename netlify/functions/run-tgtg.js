@@ -1,15 +1,12 @@
+function callPythonScript(url) {
+    let request = new XMLHttpRequest();
+    request.open("POST", url, false);
+    request.send();
+}
+
 exports.handler = async function (event, context) {
     console.log("Received event:", event);
-    $.ajax({
-        type: "POST",
-        url: "~/get-credentials.py",
-    }).done(function (o) {
-        console.log(o)
-    });
-    $.ajax({
-        type: "POST",
-        url: "~/main.py",
-    }).done(function (o) {
-        console.log(o)
-    });
+    callPythonScript("~/get-credentials.py");
+    callPythonScript("~/main.py");
 };
+
