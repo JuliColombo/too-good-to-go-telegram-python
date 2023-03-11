@@ -1,2 +1,2 @@
 [functions."run-tgtg"]
-schedule = "*/10 * * * *"
+schedule = "*/2 * * * *"
