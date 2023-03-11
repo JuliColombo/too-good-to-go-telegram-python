@@ -1,3 +1,5 @@
+let XMLHttpRequest = require('xhr2');
+
 function callPythonScript(url) {
     let request = new XMLHttpRequest();
     request.open("POST", url, false);
