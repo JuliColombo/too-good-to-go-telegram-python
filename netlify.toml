@@ -1,0 +1,2 @@
+[functions."run-tgtg"]
+schedule = "*/10 * * * *"
