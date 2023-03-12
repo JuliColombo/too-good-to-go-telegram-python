@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
     "os/exec"
+    "log"
 )
 import (
   "github.com/aws/aws-lambda-go/events"
@@ -14,6 +15,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 
     if errGetCredentials := commandGetCredentials.Run(); errGetCredentials != nil {
         fmt.Println("Error get_credentials: ", errGetCredentials)
+        log.Fatal("Error get_credentials: ", errGetCredentials)
     }
 
     return &events.APIGatewayProxyResponse{
