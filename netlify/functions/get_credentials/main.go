@@ -12,7 +12,7 @@ import (
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
     commandGetCredentials := exec.Command("python3", "../../../get_credentials.py")
 
-    if errGetCredentials := commandGetCredentials.Start(); errGetCredentials != nil {
+    if errGetCredentials := commandGetCredentials.Run(); errGetCredentials != nil {
         fmt.Println("Error get_credentials: ", errGetCredentials)
     }
 

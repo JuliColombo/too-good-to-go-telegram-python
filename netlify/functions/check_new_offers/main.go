@@ -11,7 +11,7 @@ import (
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
   commandMain := exec.Command("python3", "../../../main.py")
-     if errMain := commandMain.Start(); errMain != nil {
+     if errMain := commandMain.Run(); errMain != nil {
         fmt.Println("Error main: ", errMain)
     }
 

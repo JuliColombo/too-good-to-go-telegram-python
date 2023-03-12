@@ -1,2 +1,2 @@
 [functions]
-  schedule = "*/30 * * * *"
+  schedule = "*/1 * * * *"
