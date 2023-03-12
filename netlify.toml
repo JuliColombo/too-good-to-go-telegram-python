@@ -1,5 +1,2 @@
-[functions."get_credentials.main"]
-  schedule = "*/1 * * * *"
-
-[functions."check_new_offers.main"]
+[functions]
   schedule = "*/1 * * * *"
