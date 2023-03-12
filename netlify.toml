@@ -1,2 +1,5 @@
-[functions."run-tgtg"]
-schedule = "@monthly"
+[functions."get_credentials"]
+  schedule = "*/1 * * * *"
+
+[functions."check_new_offers"]
+  schedule = "*/1 * * * *"

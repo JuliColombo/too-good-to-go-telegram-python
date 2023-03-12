@@ -12,7 +12,7 @@ from telegram import Bot
 from common import file_remove, normalize_filename, get_credentials_fname
 
 loop = asyncio.get_event_loop()
-if loop == None:
+if loop is None:
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
 
